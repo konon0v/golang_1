@@ -6,13 +6,13 @@ import (
 	"testing"
 )
 
-func TestCount(t *testing.T) {
-	host := "time.apple.com"
+func TestNtp(t *testing.T) {
+	host := "timee.applee.ceom"
 	time := ntpGetTime(host)
 
 	gotType := reflect.TypeOf(time)
 
-	if fmt.Sprint(gotType) == "time" {
+	if fmt.Sprint(gotType) != "time.Time" {
 		t.Fatalf("bad count for %s: got %d expected time.Time", host, gotType)
 	}
 }
