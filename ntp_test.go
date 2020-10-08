@@ -7,7 +7,7 @@ import (
 )
 
 func TestNtp(t *testing.T) {
-	host := "timee.applee.ceom"
+	host := "time.apple.com"
 	time := ntpGetTime(host)
 
 	gotType := reflect.TypeOf(time)
